@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Swisss Poster by Naraly O. </title>
+</head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #poster {
+            background-color:#000117;
+            width: 480px;
+            height: calc(500px/ 18*24);
+            padding: 20px;
+        }
+        .text {
+            display: inline-block;
+            width: 100%;
+        }
+        .text--bright{
+            color:#dedfd3
+        }
+        .text--color{
+            color: #4CC6F9;
+        }
+        .text--small{
+            font-size: 8.9px;
+            line-height: 0px;
+            font-weight: bolder;
+        }
+        h1,.h1{
+            margin: 0;
+            font-weight: 540;
+        }
+        #text--topmid{
+            position: relative;
+            left: 120px;
+            top:-50px;   
+        }
+        #text--topright{
+            position: relative;
+            left: 320px;
+            top: -100px;
+        }
+        #text--topleft{
+            position: relative;
+            top: -100px;
+        }
+        #text--middle{
+            position: relative;
+            bottom: 50px;
+            font-family:Verdana, Tahoma, sans-serif;
+        }
+        .blue-rectangle{
+            background-color: #4CC6F9;
+        }
+        #rectangle--vertical{
+            height: 468px;
+            width: 130px;
+            margin-left: -20px;
+            margin-top: -40px;
+        }
+        #rectangle--horizontal{
+            height: 120px;
+            width: 370px;
+            margin-top: -120px;
+            margin-left: 90px;
+        }
+        .gray-rectangle{
+            background-color:#E3E1D8 ;
+        }
+        #grayrectangle--vertical{
+            height: 468px;
+            width: 130px;
+            margin-top: -468px;
+            margin-left: 330px;
+        }
+        #grayrectangle--horizontal{
+            height: 120px;
+            width: 280px ;
+            margin-left: 110px;
+            margin-top: -468px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="poster">
+        <div class="text text--small text--bright" id="text-topleft">
+            <h4> friday, january 9 1970</h4>
+            <h4>8:00 pm / $3.00 </h4>
+            <h4>the woodrose presents</h4>
+        </div>
+
+        <div class="text text--small text--bright" id="text--topmid">
+            <h4> at the paramouunt theatre </h4>
+            <h4> 1700 main street </h4>
+            <h4> springfield, massachusetts </h4>
+        </div>
+
+        <div class="text text--small text--bright" id="text--topright">
+            <h4>with special guests fat </h4>
+            <h4>and barry t & the studebakers </h4>
+            <h4>an auntie gravity production </h4>
+        </div>
+
+        <div class="text" id="text--middle"> 
+            <h1 class="text--color"> the </h1>
+            <h1 class="h1 text--color" id="text--secondline"> velvet underground </h1>
+        </div>
+
+        <section class="blue-rectangle" id="rectangle--vertical"></section>
+        <section class="blue-rectangle" id="rectangle--horizontal"></section>
+        <section class="gray-rectangle" id="grayrectangle--vertical"></section>
+        <section class="gray-rectangle" id="grayrectangle--horizontal"></section>
+    </div>
+</body>
+</html>
