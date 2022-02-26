@@ -20,7 +20,7 @@
         #top--left--youtube{
             position: absolute;
             left: 150px;
-            top: 5px;
+            top: 4px;
         }
         a{
             color: white;
@@ -32,36 +32,70 @@
             float: left;
             text-align: left;
             padding: 14px 16px;
-            font-size: 25px;
-
+            font-size: 27px;
         }
+        .topnav{
+            overflow: hidden;
+            background-color:#383837 ;
+        }
+        .search--bar{
+            position:absolute;
+            top: 25px;
+            left: 450px;
+            background-color: #383837;
+            width: 1150px;
+            height: 100px;
+            padding: 5px;
+            border-radius: 1px;
+            display: flex;
+            justify-content: space-between;
+        
+        }
+        .search--bar .input{
+            width:1000px ;
+            background-color: #1F1F1F;
+            font-size: 30px;
+            text-align: left;
+            color: white;
+        }
+        
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="youtube--icons" id="top--left--youtube">
             <a href="https://www.youtube.com">
-                <img src="youtubelogo.png" width="180px" height="130px">
+                <img src="youtubelogo.png" width="240px" height="130px">
             </a>
         </div>
 
         <div class="threedashes" id="three--dashes--lefttop"> 
-            <img src="threedashesyt.png" width="140px" height="130">
+            <img src="threedashesyt.png" width="150px" height="130px">
         </div>
 
         <div class="side--icons--img" style="position:absolute">
-            <img src="ytsidepageicons.png" width="780px" height="650px">
+            <img src="ytsidepageicons.png" width="600px" height="530px">
             <div class="side--container">
                 <div class="sidenav">
-                    <a style="position: absolute; left: 90px; top: 15px;" href="/">Home</a>
-                    <a style="position: absolute; left:90px; top: 85px;" href="/"> Explore</a>
-                    <a style="position: absolute; left:90px; top: 150px;" href="/"> Subscriptions </a>
+                    <a style="position: absolute; left: 85px; top: 9px;" href="/">Home</a>
+                    <a style="position: absolute; left:85px; top: 68px;" href="/"> Explore</a>
+                    <a style="position: absolute; left: 85px; top: 120px;" href="/"> Subscriptions </a>
 
-                    <a style="position: absolute; left:90px; top: 265px;" href="/"> Library</a>
-                    <a style="position: absolute; left:90px; top: 345px;" href="/"> History</a>
-                    <a style="position: absolute; left:90px; top: 420px;" href="/"> Your Videos</a>
-                    <a style="position: absolute; left:90px; top: 505px;" href="/"> Watch Later</a>
-                    <a style="position: absolute; left:90px; top: 580px;" href="/"> Liked Videos </a>
+                    <a style="position: absolute; left: 85px; top: 209px;" href="/"> Library</a>
+                    <a style="position: absolute; left: 85px; top: 268px;" href="/"> History</a>
+                    <a style="position: absolute; left: 85px; top: 328px;" href="/"> Your Videos</a>
+                    <a style="position: absolute; left: 85px; top: 395px;" href="/"> Watch Later</a>
+                    <a style="position: absolute; left: 85px; top: 460px;" href="/"> Liked Videos </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="topnav">
+            <div class="search--bar">
+                <input type="text" class="input" placeholder="Search">
+                <div class="search--button">
+                    <img src="searchbuttonyt.png" width="130px" height="90px">
                 </div>
             </div>
         </div>
