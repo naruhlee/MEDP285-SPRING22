@@ -53,7 +53,7 @@
         }
         .search--bar .input{
             width:1000px ;
-            background-color: #1F1F1F;
+            background-color:black;
             font-size: 30px;
             text-align: left;
             color: white;
@@ -66,12 +66,44 @@
         .side--icons--img{
             top: 150px ;
         }
-        .top--right--nav{
+        .microphone{
             position: absolute;
-            top: 20px;
             left: 1955px;
+            top: 20px;
+            border: none;
+            padding: 0px;
         }
+        .videoicon{
+            position: absolute;
+            left: 2350px;
+            top:20px;
+            border: none;
+            padding:0px;
+        }
+        .optionsicon{
+            position: absolute;
+            left: 2470px;
+            top: 20px;
+            padding: 0px;
+            border: none;
+        }
+        .bellicon{
+            position: absolute;
+            left: 2600px;
+            top: 20px;
+            padding: 0px;
+            border: none;
+        }
+        .profileimage{
+            position: absolute;
+            left: 2723px;
+            top: 20px;
+            padding: 0px;
+            border: none;
+        }
+        
 
+        
 
     </style>
 </head>
@@ -108,24 +140,18 @@
             <div class="search--bar">
                 <input type="text" class="input" placeholder="Search">
                 <div class="search--button">
-                    <img src="searchbuttonyt.png" width="143px" height="75px">
+                    <input type="image" class="search--button" src="searchbuttonyt.png" height="75px" width="130px">
                 </div>
             </div>
         </div>
 
         <div class="top--right--nav">
-            <img src="topbaricons.png" width="835px" height="104px">
-            <div class="three--righttop--buttons">
-
-
-            </div>
+            <input type="image" class="microphone" src="microphone.png" height="100px" width="110px" alt="Microphone">
+            <input type="image" class="videoicon" src="videoicon.png" height="100px" width="120px" alt="Broadcast Yourself">
+            <input type="image" class="optionsicon" src="optionsicon.png" width="120px" height="100px" alt="Menu">
+            <input type="image" class="bellicon" src="bellicon.png" width="120px" height="100px" alt="Notifications">
+            <input type="image" class="profileimage" src="profileimage.png" width="130px" height="100px" alt="Sign Out">
         </div>
-
-
-
-
-
-
     </div>
 </body>
 </html>
