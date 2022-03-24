@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naraly.com</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightpink;
+        }
+        .container{
+            width: 480px;
+            height: 1500px;
+            overflow: hidden;
+            background-color: lightpink;
+        }
+        .top--bar{
+            width: 700px;
+            height: 100px;
+            background-color: black;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        .top--bar p{
+            position: absolute;
+            color: lightpink;
+            font-family: sans-serif;
+            font-size: 30px;
+            left: 190px;
+            animation: top--barText 1.5s infinite;
+        }
+        @keyframes top--barText{
+            0%{color: lightpink;}
+            49%{color:lightpink}
+            60%{color:rgb(225, 206, 209); }
+            99%{color:transparent ; }
+            100% {color: lightpink}
+        }
+        .text--box--left{
+            width: 145px;
+            height: 28px;
+            background-color: black;
+            position: absolute;
+            top: 155px;
+            left: 20px;
+        }
+        .text--box--left p{
+            font-family: sans-serif;
+            font-size: 10px;
+            margin: 6px;
+            position: absolute;
+            top: 1.5px;
+            overflow: hidden;
+            color: white;
+            left:8px;
+        }
+        .text--box--right{
+            width: 140px;
+            height: 28px;
+            background-color: black;
+            position: absolute ;
+            top: 170px;
+            left: 280px;
+        }
+        .text--box--right p{
+            font-family: sans-serif;
+            font-size: 10px;
+            margin: 6px;
+            position: absolute ;
+            top: 2px;
+            color: white;
+            left: 10px;
+        }
+        #exhibit{
+            position: absolute;
+            left: 20px;
+        }
+        .squares--for--img--left{
+            width: 230px;
+            height: 320px;
+            background-color: rgb(19, 17, 23);
+            position: absolute;
+            top: 215px;
+            left: 20px;
+        }
+        .squares--for--img--right{
+            width: 220px;
+            height: 320px;
+            background-color: rgb(15, 16, 15);
+            position: absolute;
+            top: 230px;
+            left: 260px;
+        }
+        .squares--for--img--left #water{
+            position: absolute;
+            left: 6px;
+            top: 10px;
+        }
+        .squares--for--img--right #empty{
+            position: absolute;
+           right: 8px;
+           top: 10px;
+        }
+        .seperator{
+            width: 440px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: 570px;
+            left: 25px;
+        }
+        .blocks a {
+            text-decoration: none;
+            color: lightpink ;
+            position:absolute;
+            top: 13px;
+            left: 70px;
+        }
+        .blocks{
+            position: absolute;
+            border-radius: 25px;
+            background-color: black;
+            width: 260px;
+            height: 50px;
+            left: 118px;
+            top: 595px;
+        }
+        #sparkles{
+            position: absolute;
+            top: 150px;
+            left: 450px;
+            font-size: 30px;
+            animation: sparkles 1.5s infinite;
+        }
+        @keyframes sparkles {
+            0%{color: &#10024;}
+            49%{color:10024}
+            60% {color:transparent}
+            99%{color:transparent ;}
+            100% {color: &#10024}
+        }
+
+        #sparkles2{
+            position: absolute;
+            top: 170px;
+            animation: sparkles2 1.5s infinite;
+        }
+
+
+        @keyframes sparkles2 {
+            0%{color: &#10024;}
+            49%{color:&#10024}
+            60%{color:transparent}
+            99%{color:transparent ;}
+            100% {color: &#10024}
+        }
+
+        
+        #intro{
+            position: absolute;
+            top: 670px;
+            left: 15px;
+            font-weight: 600;
+        }
+        
+        .website--block{
+            position: absolute;
+            width: 480px;
+            height: 160px;
+            top: 720px;
+            background-color: rgb(129, 181, 129);
+        }
+        .website--block h2{
+            position: absolute;
+            left: 25px;
+        }
+        .website--block p{
+            position: absolute;
+            left: 20px;
+            top: 70px;
+        }
+        .website--block a{
+            text-decoration: none;
+            color: lightpink;
+        }
+        .seperator2{
+            width: 440px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: 670px;
+            left: 25px;
+        }
+        .seperatoremoji{
+            position: absolute;
+            left: 200px;
+            top: 900px;
+        }
+
+        .contact{
+            position: absolute;
+            border-radius: 25px;
+            background-color: black;
+            width: 130px;
+            height: 30px;
+            left: 60px;
+            top: 945px;
+        }
+        .contact a{
+            font-family: sans-serif;
+            color: lightpink;
+            position: absolute;
+            top: 5px;
+            left: 38px;
+            text-decoration: none;
+        }
+
+        .portfolio{
+            position: absolute;
+            border-radius: 25px;
+            background-color: black;
+            width: 130px;
+            height: 30px;
+            left: 280px;
+            top: 945px;
+        }
+
+        .portfolio a{
+            font-family: sans-serif;
+            color: lightpink;
+            position: absolute;
+            top: 5px;
+            left: 38px;
+            text-decoration: none;
+        }
+
+        .seperator3{
+            width: 440px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: 1000px;
+            left: 25px;
+        }
+        .travel--game{
+            position: absolute;
+            top: 1000px;
+            width: 450px;
+        }
+        .travel--game h2{
+            position: absolute;
+            left: 22px;
+        }
+        .travel--game #costa-rica{
+            position: absolute;
+            border-radius: 10px;
+            width: 100px;
+            background-color:rgb(129, 181, 129) ;
+            color: black;
+            text-align: center;
+            top: 117px;
+            left: 80px;
+            text-decoration: none;
+        }
+
+        .travel--game #thailand{
+            position: absolute;
+            top: 117px;
+            width: 100px;
+            border-radius: 10px;
+            background-color: lightblue;
+            color: black;
+            text-align: center;
+            left: 250px;
+            text-decoration: none;
+            height: 20px;
+        }
+        .airplane{
+            position: absolute;
+            top: 1030px;
+            left: 340px;
+            animation: airplane 1.2s forwards infinite;
+        }
+        @keyframes airplane {
+            0%{position: absolute; left: 340px;}
+            20%{position: absolute; left: 350px;}
+            40%{position: absolute; left: 360px;}
+            60%{position: absolute; left: 370px;}
+            80%{position: absolute; left: 380px;}
+            100%{position: absolute; left: 390px;}    
+        }
+
+        .seperator4{
+            width: 440px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: 1200px;
+            left: 25px;
+        }
+        .ciao{
+            position: absolute;
+            top: 1200px;
+            left: 30px;
+        }
+
+        .ciao h2{
+            text-decoration: none;
+            color: black;
+        }
+        .ciao img{
+            left: 50px;
+            position: absolute;
+            width: 300px;
+            height: 120px;
+        }
+        
+@media only screen and (max-width:500px) and (min-width:1800px) {
+     *{
+        box-sizing: border-box;
+        }
+    body{
+        background-color: lightpink;
+    }
+    .container{
+        width: 1600px;
+        height: 1300px;
+        overflow: hidden;
+        background-color: lightpink;
+        justify-content: center;
+    }
+    .top--bar{
+        width: 1600px;
+        height: 100px;
+        background-color: black;
+        align-items: center;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .top--bar p{
+        position: absolute;
+        color: lightpink;
+        font-family: sans-serif;
+        font-size: 50px;
+        left: 700px;
+        top: -7px;
+        animation: top--barText 1.5s infinite;
+    }
+    @keyframes top--barText {
+        0%{color: lightpink;}
+        49%{color:lightpink}
+        60%{color:rgb(225, 206, 209); }
+        99%{color:transparent ; }
+        100% {color: lightpink}
+    }
+    .text--box--left{
+        width: 300px;
+        height: 50px;
+        background-color: black;
+        position: absolute;
+        top: 185px;
+        left: 40px;
+    }
+    .text--box--left p{
+        font-family: sans-serif;
+        font-size: 24.5px;
+        margin: 6px;
+        position: absolute;
+        top: 2px;
+        overflow: hidden;
+        color: white;
+        left: 8px;
+    }
+    .text--box--right{
+        width: 300px;
+        height: 50px;
+        background-color: black;
+        position: absolute;
+        top: 185px;
+        left: 435px;
+    }
+    .text--box--right p{
+        font-family: sans-serif;
+        font-size: 25px;
+        margin: 6px;
+        position: absolute;
+        top: 2px;
+        color: white;
+        left: 9px;
+    }
+    #exhibit{
+        position: absolute;
+        left: 40px;
+        font-size: 30px;
+    }
+    .squares--for--img--left{
+        width: 330px;
+        height: 440px;
+        background-color: rgb(15, 16, 15);
+        position: absolute;
+        top: 270px;
+        left: 20px;
+    }
+    .squares--for--img--right{
+        width: 340px;
+        height: 440px;
+        background-color: rgb(15, 16, 15);
+        position: absolute;
+        top: 270px;
+        left: 440px;
+        }
+        .squares--for--img--left #water{
+        position: absolute;
+        left: 16px;
+        top: 10px;
+        }
+        .squares--for--img--right #empty{
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        }
+        .seperator{
+        width: 600px;
+        height: 8px;
+        background-color: black;
+        position: absolute;
+        top: 750px;
+         left: 80px;
+        }
+        .blocks a {
+         text-decoration: none;
+        color: lightpink ;
+        position:absolute;
+        top: 20px;
+        left: 60px;
+        font-size: 25px;
+        }
+        .blocks{
+        position: absolute;
+        border-radius: 40px;
+        background-color: black;
+        width: 300px;
+        height: 80px;
+        left: 230px;
+        top: 860px;
+        }
+        #sparkles{
+            position: absolute;
+            top: 160px;
+            left: 750px;
+            font-size: 30px;
+            animation: sparkles 1.5s infinite;
+        }
+        @keyframes sparkles {
+            0%{color: &#10024;}
+            49%{color:10024}
+            60% {color:transparent}
+            99%{color:transparent ;}
+            100% {color: &#10024}
+        }
+
+        #sparkles2{
+            position: absolute;
+            top: 100px;
+            animation: sparkles2 1.5s infinite;
+        }
+
+
+        @keyframes sparkles2 {
+            0%{color: &#10024;}
+            49%{color:&#10024}
+            60%{color:transparent}
+            99%{color:transparent ;}
+            100% {color: &#10024}
+        }
+
+        
+        #intro{
+            position: absolute;
+            top: 180px;
+            left: 920px;
+            font-weight: 600;
+            font-size: 30px;
+        }
+        
+        .website--block{
+            position: absolute;
+            width: 720px;
+            height: 220px;
+            top: 350px;
+            left: 880px;
+            background-color: rgb(129, 181, 129);
+        }
+        .website--block h2{
+            position: absolute;
+            left: 25px;
+            font-size: 35px;
+            top: -15px;
+        }
+        .website--block p{
+            position: absolute;
+            left: 10px;
+            top: 90px;
+            font-size: 23px;
+        }
+        .website--block a{
+            text-decoration: none;
+            color: lightpink;
+        }
+        .seperator2{
+            width: 8px;
+            height: 540px;
+            background-color: black;
+            position: absolute;
+            top: 180px;
+            left: 840px;
+        }
+        .seperatoremoji{
+            position: absolute;
+            left: 810px;
+            top: 830px;
+            font-size: 70px;
+        }
+
+        .contact{
+            position: absolute;
+            border-radius: 40px;
+            background-color: black;
+            width: 300px;
+            height: 80px;
+            left: 60px;
+            top: 1000px;
+        }
+        .contact a{
+            font-family: sans-serif;
+            color: lightpink;
+            position: absolute;
+            top: 15px;
+            left: 70px;
+            text-decoration: none;
+            font-size: 40px;
+        }
+
+        .portfolio{
+            position: absolute;
+            border-radius: 40px;
+            background-color: black;
+            width: 300px;
+            height: 80px;
+            left: 400px;
+            top: 1000px;
+        }
+
+        .portfolio a{
+            font-family: sans-serif;
+            color: lightpink;
+            position: absolute;
+            top: 14px;
+            left: 76px;
+            text-decoration: none;
+            font-size: 40px;
+        }
+
+        .seperator3{
+            width: 540px;
+            height: 8px;
+            background-color: black;
+            position: absolute;
+            top: 750px;
+            left: 950px;
+        }
+        .travel--game{
+            position: absolute;
+            top: 760px;
+            left: 900px;
+            width: 800px;
+        }
+        .travel--game h2{
+            position: absolute;
+            left: 22px;
+            font-size: 50px;
+        }
+        .travel--game #costa-rica{
+            position: absolute;
+            border-radius: 20px;
+            width: 220px;
+            height: 70px;
+            background-color:rgb(129, 181, 129) ;
+            color: black;
+            text-align: center;
+            top: 240px;
+            left: 80px;
+            text-decoration: none;
+            font-size: 40px;
+        }
+
+        .travel--game #thailand{
+            position: absolute;
+            top: 235px;
+            width: 220px;
+            border-radius: 20px;
+            background-color: lightblue;
+            color: black;
+            text-align: center;
+            left: 400px;
+            text-decoration: none;
+            height: 70px;
+            font-size: 40px;
+        }
+        .airplane{
+            position: absolute fixed;
+            top: 1090px;
+            left: 340px;
+            animation: airplane 1.2s forwards infinite;
+        }
+        @keyframes airplane {
+            0%{position: absolute; left: 970px;}
+            20%{position: absolute; left: 980px;}
+            40%{position: absolute; left: 990px;}
+            60%{position: absolute; left: 1010px;}
+            80%{position: absolute; left: 1020px;}
+            100%{position: absolute; left: 1030px;}    
+        }
+
+        .ciao{
+            position: absolute;
+            top: 1200px;
+            left: 1200px;
+        }
+        .ciao h2{
+            text-decoration: none;
+            color: black;
+        }
+        .ciao img{
+            left: 50px;
+            position: absolute;
+            width: 300px;
+            height: 120px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top--bar">
+            <p> Welcome </p>
+        </div>
+
+        <p id="sparkles"> &#10024 </p>
+        <p id="sparkles2"> &#10024 </p>
+
+        <p id="exhibit"> A mini exhibit of my art ... </p>
+
+        <div class="text--box--left">
+            <p> Truth Underwater (2021)
+            </p>
+        </div>
+        <div class="text--box--right">
+            <p> Empty Creativity (2021)
+            </p>
+        </div>
+
+        <div class="squares--for--img--left">
+            <img id="water" src="truth underwater.png" width="215px" height="300px"> 
+        </div>
+        <div class="squares--for--img--right">
+            <img id="empty" src="empty creativity.png" width="200px" height="300px">
+        </div>
+
+        <div class="seperator"> </div>
+
+        <div class="blocks">
+            <a href="https://www.instagram.com/naruhlee.design/?utm_source=ig_embed&amp;utm_campaign=loading"> S O C I A L Z &#129498 </a>
+        </div>
+
+
+        <p id="intro"> An excerpt from my website </p>
+        <div class="website--block">
+            <h2> How does buying second-hand clothing benefit anyone?!? </h2>
+            <p> Opinion - I want to start by saying that I have bought second hand clothing since I was 15.
+                 When I was 15, thrift shopping wasn't the big trend it is today.
+                I loved clothing since I ... <a href="https://wp.me/PdMTUU-6"> read more </a>
+            </p>
+        </div>
+
+        <div class="seperator2"> </div>
+        <div class="seperatoremoji"> &#127826 &#127826 &#127826 </div>
+
+        <div class="contact"> <a href="mailto: ortega.naraly28@gmail.com"> Contact </a> </div>
+        <div class="portfolio"><a href="https://drive.google.com/drive/folders/15PIMJfqQQRAY9pEFyNSfqIZs1bh-UMzq?usp=sharing"> Portfolio </a> </div>
+
+        <div class="seperator3"></div>
+
+        <div class="travel--game">
+            <h2> Now before you go...<br> where would you love to travel?</h2>
+            <a id="costa-rica" href="costaricapov.jpg"> Costa Rica </a>
+            <a id="thailand" href="thailand.jpg"> Thailand  </p>
+            <p> Enjoy the view ;)</p>
+        </div>
+
+        <div class="airplane">
+            <img src="airplane.png" width="30%">
+        </div>
+
+        <div class="seperator4"></div>
+
+        <div class="ciao">
+            <h2> Sincerely,</h2>
+            <img src="logo.png" width="50%">
+        </div>
+    </div>
+</body>
+</html>
