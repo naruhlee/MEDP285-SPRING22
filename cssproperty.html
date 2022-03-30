@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Choose a Color :)</title>
+<!-- CSS -->
+<style>
+    h1{
+      color: black;
+      text-shadow: 4px 2px 3px white;
+      text-align: center;
+      
+    }
+    h2{
+        text-shadow: 4px 2px 3px white;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    body{
+        background-color: rgb(166, 170, 239);
+    }
+    #instructions{
+        text-align: center;
+        position:absolute;
+    }
+
+
+
+
+
+
+</style>
+</head>
+<!-- HTML -->
+<body>
+
+<h1> Choose the background color of this website </h1>
+<h2> &#129498 Use the slider &#129498 <span id="colorOutput"></span></h2>
+<p> Use all sliders simultaneously to make a cool new color </p>
+
+
+<label> Red </label>
+<input type="range" id="rangeRed" value="0" min="0" max="255">
+
+<label> Green </label>
+<input type="range" id="rangeGreen" value="0" min="0" max="255">
+
+<label> Blue </label>
+<input type="range" id="rangeBlue" value="0" min="0" max="255">
+
+<p id="Instructions"> The RGB code of this color is on the webpage, so you 
+can take the code and use it for your own projects. 
+
+</p>
+
+
+<!-- Javascript -->
+<script>
+    function changeColor( ){
+        let red = document .getElementById ('rangeRed').value;
+        let green = document .getElementById ('rangeGreen').value;
+        let blue = document .getElementById ('rangeBlue').value;
+        let color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+        document.body.style.backgroundColor = color;
+        document.getElementById('colorOutput').innerHTML = ': ' + color;
+    }
+    document.getElementById('rangeRed').addEventListener('input', changeColor)
+    document.getElementById('rangeGreen').addEventListener('input', changeColor)
+    document.getElementById('rangeBlue').addEventListener('input', changeColor)
+</script> 
+</body>
+</html>
