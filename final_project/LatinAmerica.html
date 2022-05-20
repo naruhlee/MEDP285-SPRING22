@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The History of Latin Music in America</title>
+<!-- CSS -->
+<style>
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+body{
+    background-color: #8BC0F5;
+}
+.container{
+    background-color: #8BC0F5;
+    width: 2180px;
+    height: 2380px;
+    cursor: pointer;
+    position: relative;
+    left: 200px;
+    top: 200px;
+}
+.back-img{
+    position: relative;
+    height: 1980px;
+    width: 2180px;
+   
+}
+.heading{
+    position: fixed;
+    font-family: sans-serif;
+    color: rgb(2, 4, 38);
+    font-size: 90px;
+
+    left: 520px;
+    top: -30px; 
+}
+
+#instructions{
+    position: absolute;
+    color: #8BC0F5;
+    font-family: monospace;
+    font-size: 30px;
+    left: 1320px;
+    top: 200px;
+    text-align: center;
+}
+
+/* ARGENTINA */
+#btn--arg{
+position: absolute;
+top: 1500px;
+left: 1540px;
+background-color: transparent;
+border: none;
+font-size: 40px;
+color: white;
+
+}
+
+.argentina{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out ;
+    border: 5px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(232, 186, 225);
+    width: 800px;
+    max-width: 80%;
+}
+.argentina.active{
+    transform: translate(-50%, -50%) scale(1)
+}
+#argentina{
+    position: absolute;
+
+}
+.header--arg{
+    padding: 10px 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    
+}
+.header--arg .title--arg{
+    font-size: 60px;
+    font-weight: bold;
+}
+.header--arg .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: none;
+    font-size: 1,25rem;
+    font-weight: bold;
+}
+.argentina--body{
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.argentina--body p{
+    font-family: lucida  ;
+    font-size: 30px;
+    text-align: left;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* CUBA */
+#btn--cuba{
+    position: absolute;
+    left: 1000px;
+    top: 520px;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+}
+.cuba {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out ;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: lightblue;
+    width: 800px;
+    max-width: 80%;
+}
+.cuba.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+#cuba{
+    position: absolute;
+}
+.header--cuba{
+    padding: 10px 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.cuba--body p{
+    font: lucida;
+    font-size: 30px;
+    text-align: left;
+}
+
+.header--cuba .title--cuba{
+    font-size: 80px;
+    font-weight: bold;
+}
+.cuba--body{
+    padding: 10px 15px;
+    text-align: center;
+}
+#overlay1{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay1.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* NYC */
+#btn--nyc{
+    position: absolute;
+    top: 120px;
+    left: 1100px;
+    background-color: transparent;
+    font-family: sans-serif ;
+    font-weight: bold ;
+    color: white;
+    font-size: 40px;
+    border: none;
+
+}
+.nyc {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out ;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(210, 223, 248);
+    width: 800px;
+    max-width: 80%;
+}
+.nyc.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+#nyc{
+    position: absolute;
+}
+.header--nyc{
+    padding: 10px 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.header--nyc .title--nyc{
+    font-size: 35px;
+    font-weight: bold;
+}
+.nyc--body{
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.nyc--body p{
+font-family: lucida;
+font-size: 30px;
+text-align: left;
+}
+
+#overlay2{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay2.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* LATAM */
+#btn--latam{
+    position: absolute;
+    top: 1100px;
+    left: 1600px;
+    background-color: transparent;
+    font-size: 35px;
+    color: white;
+    border: none;
+
+}
+.latam {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out ;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(182, 188, 255);
+    width: 800px;
+    max-width: 80%;
+}
+.latam.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+#latam{
+    position: absolute;
+}
+.header--latam{
+    padding: 10px 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.header--latam .title--latam{
+    font-size: 35px;
+    font-weight: bold;
+}
+.latam--body{
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.latam--body p{
+    font-size: 30px;
+    font-family: lucida;
+    text-align: left;
+}
+
+#overlay3{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay3.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* DR */
+#btn--dr{
+    position: absolute;
+    top: 550px;
+    left: 1200px;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+}
+.dr {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out ;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(204, 204, 246);
+    width: 800px;
+    max-width: 80%;
+}
+.dr.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+#dr{
+    position: absolute;
+}
+.header--dr{
+    padding: 10px 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.header--dr .title--dr{
+    font-size: 30px;
+    font-weight: bold;
+}
+.dr--body{
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.dr--body p{
+    font-family: lucida;
+    font-size: 30px;
+    text-align: left;
+}
+#overlay4{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay4.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* Texas */
+#btn--texas{
+    position: absolute;
+    top: 500px;
+    left: 350px;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+}
+.texas {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out ;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(240, 221, 245);
+    width: 800px;
+    max-width: 80%;
+}
+.texas.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+#texas{
+    position: absolute;
+}
+
+.header--texas{
+    padding: 10px 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.header--texas .title--texas{
+    font-size: 45px;
+    font-weight: bold;
+}
+.texas--body{
+    padding: 10px 15px;
+}
+
+.texas--body #img--texas2{
+    position: absolute;
+    left: 360px;
+}
+.texas--body p{
+    font-size: 30px;
+    font-family: lucida;
+    text-align: left;
+}
+
+#overlay5{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay5.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* 
+USA & LATAM */
+#btn--usa{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+
+}
+.usa {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out ;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(214, 192, 215);
+    width: 800px;
+    max-width: 80%;
+}
+.usa.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+#usa{
+    position: absolute;
+}
+.header--usa{
+    padding: 10px 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.header--usa .title--usa{
+    font-size: 40px;
+    font-weight: bold;
+}
+.usa--body{
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.usa--body p {
+    font-family: lucida;
+    font-size: 30px;
+    text-align: left;
+
+}
+
+#overlay6{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay6.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* Panama */
+#btn--pan{
+    position: absolute;
+    top: 960px;
+    left: 1390px;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    color: white;
+
+
+}
+.pan {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:200ms ease-in-out ;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(168, 185, 242);
+    width: 800px;
+    max-width: 80%;
+}
+.pan.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+#pan{
+    position: absolute;
+}
+.header--pan{
+    padding: 10px 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.header--pan .title--pan{
+    font-size: 40px;
+    font-weight: bold;
+}
+.pan--body{
+    padding: 10px 15px;
+}
+.pan--body p{
+ font-size: 30px;
+ font-family: lucida;
+}
+
+#overlay7{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+#overlay7.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+
+
+
+
+</style>
+</head>
+<!-- HTML -->
+<body>
+    <p class="heading"> How Latin Music arrived to the U.S.A.</p>
+    <div class="container">
+
+        <div id="wrapper--arg">   
+            <img class="back-img" src="webimg.png" alt="Map of Latin America">
+
+            <p id="instructions"> Instructions: <br> Click any country or city to find out <br> 
+                what happened there and what influenced <br>
+                the introduction of Latin Music to America!
+                <br> Have fun learning something new <br>
+                Or simply clicking buttons and listening to <br>
+                Latin Music :)
+            </p>
+
+            <!-- TANGO -->
+            <button id="btn--arg" data-argentina-target="#argentina">  &#128205 <br> Argentina </button>
+            <div class="argentina" id="argentina">
+                <div class="header--arg">
+                <div class="title--arg"> Argentina - 1900s </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+            <div class="argentina--body">
+                <img id="img--arg"src="astor-piazzolla.jpg" width="470px" height="300px">
+                <iframe id="tango--music" style="border-radius:12px" src="https://open.spotify.com/embed/track/1IIydYQ6LTzZpgLXYpNlNy?utm_source=generator&theme=0" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                 <p> <br> Tango originated in Argentina, its root comes from the working class people. <br>
+                Tango first spread through Europe. It was the music of European Immigrants, former slaves, and the working class 
+                <br><br>
+                The accordion was brought to Latin America through German Migrants. It quickly spread to the United States <br>
+                after arrivng to Argentina.<br>
+                <br>
+                Pictured above is Astor Piazzolla playing the accordion. <br>
+                In the song, you can hear the accordion being one of the strongest instruments.
+                </p>
+            </div>
+            </div>
+            <div id="overlay"></div>
+        
+            <!-- MAMBO -->
+             <button id="btn--cuba" data-cuba-target="#cuba"> &#127464;&#127482; <br> Cuba </button>
+            <div class="cuba" id="cuba">
+            <div class="header--cuba">
+                <div class="title--cuba"> Cuba - 1930s </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+            <div class="cuba--body">
+                <img id="img--cuba"src="tito-puente-mambo.jpg" width="300px" height="500px">
+                <p> <br> Mambo originted in Cuba around the 1930s. It is the mixture of Afro-Carribean and Latin American Culture <br>
+                    Evolved in Havana on Haitian settlements in Cuba. <br>
+                    Charangas, a band that played traditional Cuban dance music helped evolve the Mambo style. 
+                    The word "Mambo" means voodoo priestess. 
+                </p>
+                <iframe id="mambo--music" style="border-radius:12px" src="https://open.spotify.com/embed/track/6TSuruBxp9t6qzKy7xqWZe?utm_source=generator" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                
+                </div>
+            </div>
+            <div id="overlay1"></div> 
+            </div>
+
+            <!-- SALSA -->
+            <button id="btn--nyc" data-nyc-target="#nyc"> &#128205 <br> NYC </button>
+         <div class="nyc" id="nyc">
+            <div class="header--nyc">
+                <div class="title--nyc"> New York City - 1960's </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+            <div class="nyc--body">
+                <img id="img--nyc"src="salsa-in-nyc.jpg" width="600px" height="400px">
+                <iframe id="salsa--music" style="border-radius:12px" src="https://open.spotify.com/embed/track/4j0CkYOhOdPyWjfpEL1sWM?utm_source=generator" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <p> <br> In the late '60s, U.S.- based Afro Caribbean musicians fused dance structures from Cuba (such as Mambo) with a Puerto Rican taste. <br>
+                    They also included influences of American jazz, funk, and R&B. From this, Salsa was born!! <br>
+                    uerto Ricans had migrated during this time through the BRACEROS program which offered jobs for Mexican/Puerto Rican Immigrants in America. <br>
+                    Which is why the origin of Salsa begins in New York. 
+                </p>
+            </div>
+         </div>
+         <div id="overlay2"></div> 
+
+         <!-- Rock Latino -->
+         <button id="btn--latam" data-latam-target="#latam"> &#128205 <br> Latin America </button>
+         <div class="latam" id="latam">
+            <div class="header--latam">
+                <div class="title--latam"> Latin America - 1970 </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+            <div class="latam--body">
+                <img id="img--latam"src="rock-latino.jpg" width="500px" height="300px">
+                <iframe id="rock--music1" style="border-radius:12px" src="https://open.spotify.com/embed/track/7zYlsFsFSmTn3KywBjLVo0?utm_source=generator" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <iframe id="rock-music2"style="border-radius:12px" src="https://open.spotify.com/embed/track/6Pur3hWy6Nzc27ilmsp5HA?utm_source=generator" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <p> <br>Heading into the '70s, the influence of the Beatles, the Rolling Stones and Bob Dylan motivated a generation of young Latinos to pick up electric guitars and compose rock anthems. <br>
+                    El Chicano formed in Los Angeles. Later came Argentina's Soda Stereo and Mexico's Caifanes.
+                </p>
+            </div>
+         </div>
+         <div id="overlay3"></div> 
+
+          <!-- Merengue & Bachata -->
+         <button id="btn--dr" data-dr-target="#dr"> &#127465;&#127476; <br> DR </button>
+         <div class="dr" id="dr">
+            <div class="header--dr">
+                <div class="title--dr"> Dominican Republic - 1970's & 90's  </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+            <div class="dr--body">
+                <img id="img--dr"src="bachata-1990s.jpg" width="500px" height="400px">
+                 <p> <br>With the arrival of Dominican immigrants in New York City,<br>
+                    There was a fusion of merengue and bachata. <br>
+                    Juan Luis Guerra was the first artist to infuse both poetry and verve. <br>
+                    Aventura is a band that originated in the Bronx with Dominican band members. <br>
+                    This is an example of how Bachata entered the U.S.A. with the help 
+                    of younger generations. 
+                </p>
+                <iframe id="bachata1"style="border-radius:12px" src="https://open.spotify.com/embed/track/5DAcQYhc2MurNpTHtX8kZ3?utm_source=generator" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <iframe id="bachata2" style="border-radius:12px" src="https://open.spotify.com/embed/track/50iOwPQbtGmEc29q2okbEh?utm_source=generator" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+               
+            </div>
+         </div>
+         <div id="overlay4"></div> 
+
+         <!-- Musica Tejana -->
+         <button id="btn--texas" data-texas-target="#texas"> &#128205 <br> Texas </button>
+         <div class="texas" id="texas">
+            <div class="header--texas">
+                <div class="title--texas"> Texas 1950s - 1990s </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+            <div class="texas--body">
+                <img style="text-align: left;"id="img--texas1"src="Selena.jpg" width="400px" height="600px">
+                <img id="img--texas2" src="Lydia-Tex.jpeg" width="430px" height="600px">
+                <p> <br>
+                    After the Mexican Revolution, European migrants arrived in Texas. With them, they brought the accordion, polka and waltzes <br>
+                    These sounds fused together naturally with the influence of Mariachi, Corridos, Cumbia, Jazz and some Rock n' Roll <br>
+                    Lydia Mendoza (pictured on the right) was born in Houston, and she was the mother of Tejano Music. <br>
+                    In her music, you hear the beginnings of this music genre, very natural and played simply on a guitar.<br>
+                    Soon after her, came the legendary Selena!Selena incorporated Cumbia, Jazz, and sometimes Pop in her music. <br>
+                    <br>
+                    You can hear the evolution of this genre and the incorporation of different instruments. <br>
+                    In the 90s, Selena became the face of Tejano Music until the end of her life at the age of 23.
+                    
+                </p>
+                <iframe id="tx--music1" style="border-radius:12px" src="https://open.spotify.com/embed/track/6duZqPvD6jrmQy7TFOGByW?utm_source=generator" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <iframe id="tx--music2"style="border-radius:12px" src="https://open.spotify.com/embed/track/7ii1YH0rOmpoRfH9HyY8To?utm_source=generator" width="60%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                
+            </div>
+         </div>
+         <div id="overlay5"></div> 
+
+         <!-- Pop Latino -->
+         <button id="btn--usa" data-usa-target="#usa"> &#128205 <br> U.S.A. & LATAM </button>
+         <div class="usa" id="usa">
+            <div class="header--usa">
+                <div class="title--usa"> U.S.A. & LATAM 1990s </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+            <div class="usa--body">
+                <img id="poplatino--img" src="pop_latino.png" width="470" height="470px">
+                <p> 
+                <br> In the 2000s there was a generation of bilingual pop stars. <br>
+                They brought Latin Music into America after years of influence,<br>
+                 they took every genre before this yearand created a hybrid of pan-Latin rhythms with a pop aesthetic. <br>
+                 Pop artists such as Shakira, Juanes, and Ricky Martin sang songs in both Spanish and English. <br>
+                 They collaborated with English artists as well. <br>
+                 For example, the song “Fotografía” (photograph) sung by Juanaes features Nelly Furtado. <br>
+                 Nelly Furtado was an English artist who dominantly sang in English and produced her <br>
+                 popular song "I'm like a bird," two years before recording with Juanes. 
+                </p>
+                <iframe id="pop--music1" style="border-radius:12px" src="https://open.spotify.com/embed/track/3TY1PFZXmYeiLcXygB74My?utm_source=generator" width="30%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <iframe  id="pop--music2" style="border-radius:12px" src="https://open.spotify.com/embed/track/4nEf53WTmwGn0ABmmGzLkm?utm_source=generator" width="30%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                
+            </div>
+         </div>
+         <div id="overlay6"></div> 
+
+         <!-- Reggaeton -->
+            <button id="btn--pan" data-pan-target="#pan"> &#127477;&#127462; <br> Panama </button>
+            <div class="pan" id="pan">
+            <div class="header--pan">
+                <div class="title--pan"> Panama - 1970s </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+            <div class="pan--body">
+            <img id="pan--img" src="reggae_img.jpg" width="400px" height="400px">
+            <iframe style="position: absolute; left: 420px"id="og_reggae_music" style="border-radius:12px" src="https://open.spotify.com/embed/track/56vD8HM5H08hknJtMcNHOP?utm_source=generator" width="30%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="position: absolute; left: 420px; top: 160px"id="ivy_music" style="border-radius:12px" src="https://open.spotify.com/embed/track/61HuVAedKGMO7jWl8ZyALQ?utm_source=generator" width="30%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <p> <br> 
+                Some people don't know that Reggaeton originated in Panama. It began as reggae.<br>
+                El General was an artist in Panama who set the foundation of reggae which later becomes reggaeton. <br>
+                Puerto Rican artists such as Ivy Queen, Tego Calderon & Don Omar built upon the foundation. <br>
+                They added their tropical influences and American rap — and from this, Reggaeton was born. <br>
+                Now we see Reggaetón as one of the most popular genres among Latinos, specifically younger audiences <br>
+                Recently we have seen Reggaeton collaborate with other genres as well! <br>
+                For example, Aventura, the bachata band of the 90s has made a comeback recently <br> 
+                and collaborated with Reggaeton artist Bad Bunny to fuse both genres. 
+            </p>
+            </div>
+         </div>
+         <div id="overlay7"></div> 
+
+
+
+
+
+    </div>
+    
+              
+
+
+
+
+
+
+<!-- Javascript -->
+<script>
+
+    // ARGENTINA
+    const openArgentinaButtons = document.querySelectorAll('[data-argentina-target]')
+    const closeArgentinaButtons = document.querySelectorAll('[data-close-button]')
+    const overlay = document.getElementById('overlay')
+
+    openArgentinaButtons.forEach(button => {
+        button.addEventListener('click',() =>{
+            const argentina = document.querySelector(button.dataset.argentinaTarget)
+            openArgentina(argentina)
+        })
+    })
+
+    closeArgentinaButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const argentina = button.closest('.argentina')
+            closeArgentina(argentina)
+        })
+    })
+
+    function openArgentina(argentina){
+        if(argentina == null) return
+        argentina.classList.add('active')
+        overlay.classList.add('active')
+    }
+    
+    function closeArgentina(argentina){
+        if(argentina == null) return
+        argentina.classList.remove('active')
+        overlay.classList.remove('active')
+    }
+
+    // Cuba
+    const openCubaButtons = document.querySelectorAll('[data-cuba-target]')
+    const closeCubaButtons = document.querySelectorAll('[data-close-button]')
+    const overlay1 = document.getElementById('overlay1')
+
+    openCubaButtons.forEach(button => {
+        button.addEventListener('click',() =>{
+            const cuba = document.querySelector(button.dataset.cubaTarget)
+            openCuba(cuba)
+        })
+    })
+
+    closeCubaButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const cuba = button.closest('.cuba')
+            closeCuba(cuba)
+        })
+    })
+
+    function openCuba(cuba){
+        if(cuba == null) return
+        cuba.classList.add('active')
+        overlay1.classList.add('active')
+    }
+    
+    function closeCuba(cuba){
+        if(cuba == null) return
+        cuba.classList.remove('active')
+        overlay1.classList.remove('active')
+    }
+
+    // NYC
+    const openNycButtons = document.querySelectorAll('[data-nyc-target]')
+    const closeNycButtons = document.querySelectorAll('[data-close-button]')
+    const overlay2 = document.getElementById('overlay2')
+
+    openNycButtons.forEach(button => {
+        button.addEventListener('click',() =>{
+            const nyc = document.querySelector(button.dataset.nycTarget)
+            openNyc(nyc)
+        })
+    })
+
+    closeNycButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const nyc = button.closest('.nyc')
+            closeNyc(nyc)
+        })
+    })
+
+    function openNyc(nyc){
+        if(nyc == null) return
+        nyc.classList.add('active')
+        overlay2.classList.add('active')
+    }
+    
+    function closeNyc(nyc){
+        if(nyc == null) return
+        nyc.classList.remove('active')
+        overlay2.classList.remove('active')
+    }
+    
+    // LATAM
+    const openLatamButtons = document.querySelectorAll('[data-latam-target]')
+    const closeLatamButtons = document.querySelectorAll('[data-close-button]')
+    const overlay3 = document.getElementById('overlay3')
+
+    openLatamButtons.forEach(button => {
+        button.addEventListener('click',() =>{
+            const latam = document.querySelector(button.dataset.latamTarget)
+            openLatam(latam)
+        })
+    })
+
+    closeLatamButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const latam = button.closest('.latam')
+            closeLatam(latam)
+        })
+    })
+
+    function openLatam(latam){
+        if(latam == null) return
+        latam.classList.add('active')
+        overlay3.classList.add('active')
+    }
+    
+    function closeLatam(latam){
+        if(latam == null) return
+        latam.classList.remove('active')
+        overlay3.classList.remove('active')
+    }
+
+    // DR
+    const openDrButtons = document.querySelectorAll('[data-dr-target]')
+    const closeDrButtons = document.querySelectorAll('[data-close-button]')
+    const overlay4 = document.getElementById('overlay4')
+
+    openDrButtons.forEach(button => {
+        button.addEventListener('click',() =>{
+            const dr = document.querySelector(button.dataset.drTarget)
+            openDr(dr)
+        })
+    })
+
+    closeDrButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const dr = button.closest('.dr')
+            closeDr(dr)
+        })
+    })
+
+    function openDr(dr){
+        if(dr == null) return
+        dr.classList.add('active')
+        overlay4.classList.add('active')
+    }
+    
+    function closeDr(dr){
+        if(dr == null) return
+        dr.classList.remove('active')
+        overlay4.classList.remove('active')
+    }
+
+    // Texas
+    const openTexasButtons = document.querySelectorAll('[data-texas-target]')
+    const closeTexasButtons = document.querySelectorAll('[data-close-button]')
+    const overlay5 = document.getElementById('overlay5')
+
+    openTexasButtons.forEach(button => {
+        button.addEventListener('click',() =>{
+            const texas = document.querySelector(button.dataset.texasTarget)
+            openTexas(texas)
+        })
+    })
+
+    closeTexasButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const texas = button.closest('.texas')
+            closeTexas(texas)
+        })
+    })
+
+    function openTexas(texas){
+        if(texas == null) return
+        texas.classList.add('active')
+        overlay5.classList.add('active')
+    }
+    
+    function closeTexas(texas){
+        if(texas == null) return
+        texas.classList.remove('active')
+        overlay5.classList.remove('active')
+    }
+
+    // USA & LATAM
+    const openUsaButtons = document.querySelectorAll('[data-usa-target]')
+    const closeUsaButtons = document.querySelectorAll('[data-close-button]')
+    const overlay6 = document.getElementById('overlay6')
+
+    openUsaButtons.forEach(button => {
+        button.addEventListener('click',() =>{
+            const usa = document.querySelector(button.dataset.usaTarget)
+            openUsa(usa)
+        })
+    })
+
+    closeUsaButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const usa = button.closest('.usa')
+            closeUsa(usa)
+        })
+    })
+
+    function openUsa(usa){
+        if(usa == null) return
+        usa.classList.add('active')
+        overlay6.classList.add('active')
+    }
+    
+    function closeUsa(usa){
+        if(usa == null) return
+        usa.classList.remove('active')
+        overlay6.classList.remove('active')
+    }
+
+    // Panama
+    const openPanButtons = document.querySelectorAll('[data-pan-target]')
+    const closePanButtons = document.querySelectorAll('[data-close-button]')
+    const overlay7 = document.getElementById('overlay7')
+
+    openPanButtons.forEach(button => {
+        button.addEventListener('click',() =>{
+            const pan = document.querySelector(button.dataset.panTarget)
+            openPan(pan)
+        })
+    })
+
+    closePanButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const pan = button.closest('.pan')
+            closePan(pan)
+        })
+    })
+
+    function openPan(pan){
+        if(pan == null) return
+        pan.classList.add('active')
+        overlay7.classList.add('active')
+    }
+    
+    function closePan(pan){
+        if(pan == null) return
+        pan.classList.remove('active')
+        overlay7.classList.remove('active')
+    }
+
+
+
+</script>   
+</body>
+</html>
